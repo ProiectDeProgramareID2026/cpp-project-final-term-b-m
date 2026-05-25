@@ -1,7 +1,7 @@
-#include "CommandParser.h"
-#include "EmployeeRepository.h"
-#include "SearchService.h"
-#include "ReportService.h"
+#include "../include/CommandParser.h"
+#include "../include/EmployeeRepository.h"
+#include "../include/SearchService.h"
+#include "../include/ReportService.h"
 #include <iostream>
 #include <string>
 #include <stdexcept>

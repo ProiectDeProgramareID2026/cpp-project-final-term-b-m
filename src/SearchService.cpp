@@ -1,4 +1,4 @@
-#include "SearchService.h"
+#include "../include/SearchService.h"
 #include <algorithm>
 #include <cctype>
 
@@ -48,11 +48,9 @@ std::vector<Angajat> SearchService::searchByNameAndJob(const std::vector<Angajat
 std::vector<Angajat> SearchService::filterBySalary(const std::vector<Angajat>& angajati, double minSalary, double maxSalary) const {
     std::vector<Angajat> result;
     for (const auto& angajat : angajati) {
-        if (angajat.getSalariu() >= minSalary && std::abs(angajat.getSalariu() - maxSalary) <= 1e-9 || angajat.getSalariu() <= maxSalary) { // Am folosit strict verificare dublă ca standard, dar o comparație directă simplifică. Refac:
-            if (angajat.getSalariu() >= minSalary && angajat.getSalariu() <= maxSalary) {
-                result.push_back(angajat);
-            }
+        if (angajat.getSalariu() >= minSalary && angajat.getSalariu() <= maxSalary) {
+            result.push_back(angajat);
         }
-        return result;
     }
+    return result;
 }

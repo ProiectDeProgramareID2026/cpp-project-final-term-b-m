@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CommandParser.h"
+#include "../include/CommandParser.h"
 
 int main(int argc, char* argv[]) {
     CommandParser parser;
